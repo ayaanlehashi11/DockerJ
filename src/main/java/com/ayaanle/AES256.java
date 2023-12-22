@@ -88,7 +88,7 @@ public static String decrypt(String strToDecrypt, String secretKey, String salt)
     String message = "Tiro tijaabo : Kow laba saddex .";
 
     // Encrypt the string
-    String encryptedMessage= AES256.encrypt(message, secretKey, salt);
+    String encryptedMessage= AES256.encrypt(message, key, salt);
     if (encryptedString != null) {
         System.out.println("Encrypted: " + encryptedMessage);
     } else {
