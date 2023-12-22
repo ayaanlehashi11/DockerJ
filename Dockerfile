@@ -27,14 +27,6 @@ RUN gradle --no-daemon build
 # Java image for the application to run in.
 #
 FROM openjdk:12-alpine
-
-#
-# Copy the jar file in and name it app.jar.
-#
-ARG BUILD_HOME
-ENV APP_HOME=$BUILD_HOME
-COPY --from=build-image $APP_HOME/build/libs/DockerJ.jar main.jar
-
 #
 # The command to run when the container starts.
 #
