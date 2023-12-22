@@ -81,25 +81,25 @@ public static String decrypt(String strToDecrypt, String secretKey, String salt)
     public static void main(String[] args) {
 
     // Define your secret key and salt (keep these secure and don't hardcode in production)
-    String secretKey = "AyaanleMaxamed";
+    String key = "AyaanleMaxamed";
     String salt = "Hashi";
 
     // String to be encrypted
     String message = "Tiro tijaabo : Kow laba saddex .";
 
     // Encrypt the string
-    String encryptedString = AES256.encrypt(originalString, secretKey, salt);
+    String encryptedMessage= AES256.encrypt(message, secretKey, salt);
     if (encryptedString != null) {
-        System.out.println("Encrypted: " + encryptedString);
+        System.out.println("Encrypted: " + encryptedMessage);
     } else {
         System.err.println("Encryption failed.");
         return;
     }
 
     // Decrypt the string
-    String decryptedString = AES256.decrypt(encryptedString, secretKey, salt);
+    String decryptedMessage = AES256.decrypt(encryptedMessage, key, salt);
     if (decryptedString != null) {
-        System.out.println("Decrypted: " + decryptedString);
+        System.out.println("Decrypted: " + decryptedMessage);
     } else {
         System.err.println("Decryption failed.");
     }
