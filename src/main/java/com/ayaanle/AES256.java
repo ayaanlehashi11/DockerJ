@@ -89,7 +89,7 @@ public static String decrypt(String strToDecrypt, String secretKey, String salt)
 
     // Encrypt the string
     String encryptedMessage= AES256.encrypt(message, key, salt);
-    if (encryptedString != null) {
+    if (encryptedMessage != null) {
         System.out.println("Encrypted: " + encryptedMessage);
     } else {
         System.err.println("Encryption failed.");
@@ -98,7 +98,7 @@ public static String decrypt(String strToDecrypt, String secretKey, String salt)
 
     // Decrypt the string
     String decryptedMessage = AES256.decrypt(encryptedMessage, key, salt);
-    if (decryptedString != null) {
+    if (decryptedMessage != null) {
         System.out.println("Decrypted: " + decryptedMessage);
     } else {
         System.err.println("Decryption failed.");
